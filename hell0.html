@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validating</title>
+  </head>
+  <body style="background-color:LightGray;">
+    <center>
+    <h1>Validating Email ID</h1>
+    <br>
+
+
+    <input id="userInput">
+    <button onclick="myFunction()">CHECK</button>
+
+    <p id="message">Enter Your Id</p>
+
+    </center>
+    <script>
+      function myFunction(){
+        let a=document.querySelector("#userInput");
+        let b=document.querySelector("#message");
+        var c=a.value;
+        k=c.slice(c.length-10,c.length)
+        if (k!=="@gmail.com"){
+          message.innerHTML="Invalid Email ID!!. Try Again1";
+        }
+        else if (c.includes(" ")){
+          message.innerHTML="Invalid charecters!!. Try Again"
+        }
+        else{
+          message.innerHTML="Its a valid Email ID"
+        }
+
+      }
+    </script>
+
+  </body>
+</html>
